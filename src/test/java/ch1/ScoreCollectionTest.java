@@ -1,10 +1,10 @@
-package iloveyouboss;
+package ch1;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.junit.*;
 
-import iloveyouboss.ScoreCollection;
+import ch1.ScoreCollection;
 
 public class ScoreCollectionTest{
 

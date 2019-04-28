@@ -1,4 +1,4 @@
-package iloveyouboss;
+package ch1;
 
 import java.util.*;
 
