@@ -90,3 +90,9 @@
 [【Java】Gradleのインストールと基本的な使い方（画像付きで解説）](https://eng-entrance.com/gradle-install-use)
 
 [インストールレスで Gradle してみる](http://d.hatena.ne.jp/bluepapa32/20110308/1299602195)
+
+#### 公式リファレンス
+
+[JUnit 4.13-beta-1 API](https://junit.org/junit4/javadoc/latest/index.html)  
+[Hamcrest 2.1 API](http://hamcrest.org/JavaHamcrest/javadoc/2.1/)
+[Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.html)
