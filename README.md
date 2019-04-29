@@ -17,12 +17,12 @@
 
 ### 動作環境
 
-- Ubuntu16
+- Ubuntu16,Windows10
 - JDK1.8以上1.10以下
 
 ### 手順
 
-1. 作業ディレクトリにコマンドラインで入り、以下のコマンドを実行する。  
+1. 作業ディレクトリにコマンドライン(Windowsはコマンドプロンプト)で入り、以下のコマンドを実行する。  
 `git clone https://github.com/Takabow0705/junit_study.git`  
 
 2. 使用するOSによって以下の手順を実行する。
@@ -37,7 +37,7 @@
 
 - Windowsの場合  
 以下のコマンドを作業フォルダ内で実行。   
-`cd junit_study/`  
+`cd junit_study`  
 `gradlew.bat build`
 
 3. コマンド実行時に以下の文字がコマンドラインに表示されれば成功。  
@@ -66,7 +66,7 @@
 **注意！**  
 今回はJUnitを動かすことのみを目的としているため、`gradlew`コマンドによってメインクラスを起動することはできない。
 
-## 参照サイト
+## 参考サイト
 
 [Gradle で JUnit によるユニットテストを実行する](https://maku77.github.io/gradle/test-junit.html) 
 
