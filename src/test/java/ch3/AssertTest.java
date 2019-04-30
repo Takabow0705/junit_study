@@ -54,7 +54,7 @@ public class AssertTest{
     @Test
     public void exceptionRule(){
         thrown.expect(InsufficientFundsException.class);
-        thrown.expectMessage("残高不足です。");
+        thrown.expectMessage("Balance only " + 0);
 
         account.withdraw(10000);
     }
