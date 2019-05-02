@@ -18,7 +18,7 @@
 
 ### 動作環境
 
-- Ubuntu16,Windows10
+- Ubuntu16,Windows10,OS X
 - JDK1.8以上1.10以下
 
 ### 手順
