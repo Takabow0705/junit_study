@@ -25,11 +25,12 @@ public class SampleATest{
     public void testVerify() {
          
         // モックを用意する。
-        when(sampleBMock.getName((Integer)anyObject())).thenReturn("mock");
+        when(sampleBMock.getName((Integer)anyObject())).thenReturn("mock")
+                                                       .thenReturn("mock2");
  
         // テスト対象のクラスを実行します。
         String ret = sampleA.createName();
-        
+
         // 呼び出し回数を確認する。
         // sampleBMock.getName() メソッドの引数が、1で、
         // sampleBMock.getName() メソッドの呼び出し回数が、1回
@@ -37,6 +38,10 @@ public class SampleATest{
         verify(sampleBMock, times(1)).getName(1);      
         // 戻り値を確認する。
         assertEquals("mock", ret);
+
+        String ret2 = sampleA.createName();
+
+        assertEquals("mock2", ret2);      
     }
 
     @Test
