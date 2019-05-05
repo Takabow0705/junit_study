@@ -13,7 +13,9 @@ public class SampleATest{
     private SampleB sampleBMock;
     @InjectMocks
     private SampleA sampleA = new SampleA();
- 
+    @Spy
+    private SampleC sampleCMock = new SampleC();
+
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
@@ -30,5 +32,19 @@ public class SampleATest{
          
         // 戻り値を確認する。
         assertEquals("mock", ret);
+    }
+
+    @Test
+    public void createNameBySampleCTest() {
+         
+        // モックを用意する。
+        // getPrice()メソッドのみをモック化します。
+        doReturn(555).when(sampleCMock).getPrice((Integer)anyObject());
+         
+        // テスト対象のクラスを実行します。
+        String ret = sampleA.createNameBySampleC();
+         
+        // 戻り値を確認する。
+        assertEquals("id:3 price:555", ret);
     }
 }
