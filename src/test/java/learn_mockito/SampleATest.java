@@ -29,7 +29,12 @@ public class SampleATest{
  
         // テスト対象のクラスを実行します。
         String ret = sampleA.createName();
-         
+        
+        // 呼び出し回数を確認する。
+        // sampleBMock.getName() メソッドの引数が、1で、
+        // sampleBMock.getName() メソッドの呼び出し回数が、1回
+        // の場合はエラーにならずにここを通過する。
+        verify(sampleBMock, times(1)).getName(1);      
         // 戻り値を確認する。
         assertEquals("mock", ret);
     }
