@@ -9,7 +9,7 @@ public class Bond {
     private BigDecimal coupon;
     private BigDecimal bookValue;
     private BigDecimal fairValue;
-    private BigDecimal unit;
+    private BigDecimal amount;
     private boolean deleteFlag;
 
     private Bond(){}
@@ -78,11 +78,11 @@ public class Bond {
 
     /**
      * 
-     * @param unit
+     * @param amount
      * @return
      */
-    public Bond setUnit(BigDecimal unit){
-        this.unit = unit;
+    public Bond setAmount(BigDecimal amount){
+        this.amount = amount;
         return this;
     }
     /**
@@ -119,8 +119,8 @@ public class Bond {
         return this.bookValue;
     }
 
-    public BigDecimal getUnit(){
-        return this.unit;
+    public BigDecimal getAmount(){
+        return this.amount;
     }
 
     public boolean getDeleteFlag(){
