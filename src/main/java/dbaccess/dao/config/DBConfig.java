@@ -5,7 +5,7 @@ package dbaccess.dao.config;
  */
 public final class DBConfig{
     /** DBアクセス用変数*/
-    private static final String DB_URL = "http://localhost:3306/";
+    private static final String DB_URL = "jdbc:mysql://localhost/testDB";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "root";
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
