@@ -10,6 +10,7 @@ public class Bond {
     private BigDecimal bookValue;
     private BigDecimal fairValue;
     private BigDecimal unit;
+    private boolean deleteFlag;
 
     private Bond(){}
 
@@ -84,6 +85,15 @@ public class Bond {
         this.unit = unit;
         return this;
     }
+    /**
+     * 
+     * @param deleteFlag
+     * @return
+     */
+    public Bond setDeleteFlag(boolean deleteFlag){
+        this.deleteFlag = deleteFlag;
+        return this;
+    }
 
     public String getCode(){
         return this.code;
@@ -111,6 +121,10 @@ public class Bond {
 
     public BigDecimal getUnit(){
         return this.unit;
+    }
+
+    public boolean getDeleteFlag(){
+        return this.deleteFlag;
     }
 
 }
