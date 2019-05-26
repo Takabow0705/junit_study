@@ -1,0 +1,12 @@
+create table testDB.BOND(
+    ID              INT(10) AUTO_INCREMENT
+    ,BOND_CODE      VARCHAR2(50) NOT NULL
+    ,BONE_NAME      VARCHAR2(50) NOT NULL
+    ,MATURITY       VARCHAR2(10) NOT NULL
+    ,COUPON         DECIMAL(18,12) NOT NULL  
+    ,BOOK_VALUE     DECIMAL(32,12) NOT NULL
+    ,FAIR_VALUE     DECIMAL(32,12) 
+    ,AMOUNT         DECIMAL(10,0)  NOT NULL
+    ,DELETE_FLAG    BOOL NOT NULL
+    ,primary key(ID)
+)
