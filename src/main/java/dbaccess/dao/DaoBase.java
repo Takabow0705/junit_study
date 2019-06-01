@@ -27,7 +27,7 @@ abstract class DaoBase{
                                               CONFIG.getPASSWORD());
             
             return con.createStatement();
-        }catch(SQLException e){
+        }catch(SQLException | ClassNotFoundException e){
             LOGGER.info("コネクション時にエラーが発生しました。");
             e.printStackTrace();
             return null;
