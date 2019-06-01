@@ -7,5 +7,5 @@ create table testDB.BOND(
     ,FAIR_VALUE     DECIMAL(32,12) 
     ,AMOUNT         DECIMAL(10,0)  NOT NULL
     ,DELETE_FLAG    BOOL NOT NULL
-    ,primary key(ID)
+    ,primary key(BOND_CODE)
 )
