@@ -8,5 +8,7 @@ build
 bin
 .settings
 .vscode
+.idea
+*/*.iml
 #sybolic link of test result
 result
