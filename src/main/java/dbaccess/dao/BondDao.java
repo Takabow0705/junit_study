@@ -8,8 +8,19 @@ import java.util.List;
 
 import dbaccess.dao.model.Bond;
 
+/**
+ * DBに接続して債券データを取得するDAOクラス
+ * 
+ * @author takahiro haraguchi
+ * 
+ */
 public class BondDao extends DaoBase {
 
+    /**
+     * 債券データのうち、有効なもののみを取得して返却する
+     * 
+     * @return List<Bond>
+     */
     public List<Bond> selectAllBond(){
         String sql = "select 1 from Bond where delete_flag = 0";
 
