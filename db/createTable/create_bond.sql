@@ -1,3 +1,4 @@
+create table if not exists testDB.BOND(
     BOND_CODE      VARCHAR(50) NOT NULL
     ,BONE_NAME      VARCHAR(50) NOT NULL
     ,MATURITY       VARCHAR(10) NOT NULL
