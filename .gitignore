@@ -9,6 +9,6 @@ bin
 .settings
 .vscode
 .idea
-*/*.iml
+*.iml
 #sybolic link of test result
 result
