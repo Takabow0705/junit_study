@@ -17,7 +17,7 @@ import dbaccess.dao.model.Bond;
  */
 public class BondDao extends DaoBase {
     /** ロガー */
-    private static Logger logger = Logger.getLogger(BondDao.class);
+    private static final Logger logger = Logger.getLogger(BondDao.class.getName());
     
     /**
      * 債券データのうち、有効なもののみを取得して返却する
