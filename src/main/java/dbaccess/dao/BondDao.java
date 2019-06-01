@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import dbaccess.dao.model.Bond;
 
@@ -15,7 +16,9 @@ import dbaccess.dao.model.Bond;
  * 
  */
 public class BondDao extends DaoBase {
-
+    /** ロガー */
+    private static Logger logger = Logger.getLogger(BondDao.class);
+    
     /**
      * 債券データのうち、有効なもののみを取得して返却する
      * 
@@ -25,9 +28,10 @@ public class BondDao extends DaoBase {
         String sql = "select 1 from Bond where delete_flag = 0";
 
         try(Statement stmt = connect();){
-            
+            logger.info("DB Connection start");
             ResultSet rset = stmt.executeQuery(sql);
-            List<Bond> result = new ArrayList();
+            logger.info(sql);
+            List<Bond> result = new ArrayList<>();
         
             while(rset.next()){
                 Bond bond = Bond.getInstance()
@@ -42,6 +46,7 @@ public class BondDao extends DaoBase {
                             
                 result.add(bond);
             }
+            logger.info("DB Connection finished");
             return result;
         }catch(SQLException e){
             e.printStackTrace();
