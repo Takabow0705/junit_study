@@ -25,7 +25,7 @@ public class BondDao extends DaoBase {
      * @return List<Bond>
      */
     public List<Bond> selectAllBond(){
-        String sql = "select 1 from Bond where delete_flag = 0";
+        String sql = "select * from Bond where delete_flag = 0";
 
         try(Statement stmt = connect();){
             logger.info("DB Connection start");
