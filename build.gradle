@@ -24,6 +24,8 @@ dependencies {
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
     //mysql connector
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+    //logger
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     //add removed files at remote repository
     compile files('lib/httpclient-4.3.5.jar')
     compile files('lib/httpcore-4.3.2.jar')
