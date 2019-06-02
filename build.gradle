@@ -26,6 +26,8 @@ dependencies {
     implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
     //logger
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    //lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version:'1.16.10'
     //add removed files at remote repository
     compile files('lib/httpclient-4.3.5.jar')
     compile files('lib/httpcore-4.3.2.jar')
