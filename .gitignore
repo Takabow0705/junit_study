@@ -12,3 +12,5 @@ bin
 *.iml
 #sybolic link of test result
 result
+out
+
