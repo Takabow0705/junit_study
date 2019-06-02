@@ -10,7 +10,7 @@ public class Bond {
     private BigDecimal bookValue;
     private BigDecimal fairValue;
     private BigDecimal amount;
-    private boolean deleteFlag;
+    private Boolean deleteFlag;
 
     private Bond(){}
 
