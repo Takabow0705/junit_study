@@ -34,15 +34,16 @@ public class BondDao extends DaoBase {
             List<Bond> result = new ArrayList<>();
         
             while(rset.next()){
-                Bond bond = Bond.getInstance()
-                                .setCode(rset.getString(1))
-                                .setName(rset.getString(2))
-                                .setMaturity(rset.getString(3))
-                                .setCoupon(rset.getBigDecimal(4))
-                                .setBookValue(rset.getBigDecimal(5))
-                                .setFairValue(rset.getBigDecimal(6))
-                                .setAmount(rset.getBigDecimal(7))
-                                .setDeleteFlag(rset.getBoolean(8));
+                Bond bond = Bond.builder()
+                                .code(rset.getString(1))
+                                .name(rset.getString(2))
+                                .maturity(rset.getString(3))
+                                .coupon(rset.getBigDecimal(4))
+                                .bookValue(rset.getBigDecimal(5))
+                                .fairValue(rset.getBigDecimal(6))
+                                .amount(rset.getBigDecimal(7))
+                                .deleteFlag(rset.getBoolean(8))
+                                .build();
                             
                 result.add(bond);
             }
