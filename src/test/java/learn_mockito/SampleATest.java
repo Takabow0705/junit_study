@@ -1,7 +1,10 @@
 package learn_mockito;
 
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.junit.Assert.*;
 import org.junit.*;
 import org.mockito.*;
@@ -25,7 +28,7 @@ public class SampleATest{
     public void testVerify() {
          
         // モックを用意する。
-        when(sampleBMock.getName((Integer)anyObject())).thenReturn("mock")
+        when(sampleBMock.getName(any(Integer.class))).thenReturn("mock")
                                                        .thenReturn("mock2");
  
         // テスト対象のクラスを実行します。
@@ -49,7 +52,7 @@ public class SampleATest{
          
         // モックを用意する。
         // getPrice()メソッドのみをモック化します。
-        doReturn(555).when(sampleCMock).getPrice((Integer)anyObject());
+        doReturn(555).when(sampleCMock).getPrice(any(Integer.class));
          
         // テスト対象のクラスを実行します。
         String ret = sampleA.createNameBySampleC();
