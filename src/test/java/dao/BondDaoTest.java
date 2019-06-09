@@ -74,8 +74,10 @@ public class BondDaoTest{
                                         .stream()
                                         .map(Bond::getDeleteFlag)
                                         .collect(Collectors.toList());
-        //ToDo 明らかにおかしい
-        assertThat(false,allOf(is(false)));
+        //サイズが6であること
+        assertThat(flagList.size(),equalTo(6));
+        //trueを含まないこと
+        assertThat(flagList,not(hasItem(true)));
 
     }
 
