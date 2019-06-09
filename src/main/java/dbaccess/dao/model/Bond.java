@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 
 @Data
 @Builder
+@AllArgsConstructor
 public class Bond {
     /* 債券コード**/
     @Getter
@@ -40,6 +41,9 @@ public class Bond {
     @Setter
     private Boolean deleteFlag;
 
+    /**
+     * Bondの直接のインスタンス化を回避
+     */
     private Bond(){}
 
 }
